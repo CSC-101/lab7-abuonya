@@ -9,15 +9,16 @@ from convert import str_to_float
     # Input: "72.2" "meow" "64" "Done" --> str  #Ouput Given Input: [72.2, 64] --> list[float]
 
 def gather_numbers():
-    user_input = input("Input ONE number.")
+    user_input = ""     # initializing it empty so it can be someplace in my distant memory...
     temp_list = []
-
-    try:
-        str_to_float(user_input)
-        temp_list.append(user_input)
-        return temp_list
-    except ValueError:
-        print("That was not an acceptable input. Numbers only, please. ")
+    while user_input != "Done" or user_input!= "done":
+        user_input = input("Input ONE number. Or Done, if you're finished: ")
+        temp_number = str_to_float(user_input)
+        if temp_number is not None:
+            temp_list.append(temp_number)
+        else:
+            print(f"So...that, was not an acceptable input. Numbers only, please. ")
+    return temp_list
 
 if __name__ == '__main__':
     test = gather_numbers()
