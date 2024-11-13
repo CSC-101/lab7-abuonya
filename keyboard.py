@@ -21,6 +21,7 @@ def gather_numbers():
     return temp_list
 
 if __name__ == '__main__':
-    test = gather_numbers()
-    print(test)
+    user_input = gather_numbers()
+    sum_of_numbers = sum(user_input)
+    print("The sum of your valid inputs are: ", sum_of_numbers)
 
