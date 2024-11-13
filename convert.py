@@ -7,4 +7,8 @@ from typing import Optional
     # Input: "72.2" --> str  #Ouput Given Input: 72.2 --> Optional[float]
 
 def str_to_float(string:str) -> Optional[float]:
-
+    try:
+        temporary_float = float(string)
+        return temporary_float
+    except ValueError:
+        return None
