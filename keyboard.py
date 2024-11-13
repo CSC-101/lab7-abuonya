@@ -11,15 +11,16 @@ from convert import str_to_float
 def gather_numbers():
     user_input = ""     # initializing it empty so it can be someplace in my distant memory...
     temp_list = []
-    while user_input != "Done" or user_input!= "done":
+    while not user_input == "Done":
         user_input = input("Input ONE number. Or Done, if you're finished: ")
         temp_number = str_to_float(user_input)
         if temp_number is not None:
             temp_list.append(temp_number)
-        else:
-            print(f"So...that, was not an acceptable input. Numbers only, please. ")
+
+    print("All Done! Here is your list of VALID numbers.")
     return temp_list
 
 if __name__ == '__main__':
     test = gather_numbers()
     print(test)
+
