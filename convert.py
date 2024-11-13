@@ -9,6 +9,7 @@ from typing import Optional
 def str_to_float(string:str) -> Optional[float]:
     try:
         temporary_float = float(string)
+        print(temporary_float)
         return temporary_float
     except ValueError:
         return None
